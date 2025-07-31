@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokenCash | Conversión de Tokens a Dinero Real</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span>Token</span><span class="logo-highlight">Cash</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#calculator">Calculadora</a></li>
+                    <li><a href="#how-it-works">Cómo funciona</a></li>
+                    <li><a href="#fees">Tarifas</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Convierte tus tokens en dinero real al mejor cambio</h1>
+                <p class="subtitle">Bajas comisiones y pagos inmediatos para modelos webcam</p>
+                <a href="#calculator" class="cta-button">Calcular ahora</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.png" alt="Modelo webcam recibiendo pago">
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2>Calculadora de Conversión</h2>
+            <p class="section-subtitle">Descubre cuánto puedes recibir por tus tokens</p>
+            
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="platform">Plataforma</label>
+                        <select id="platform" class="form-control">
+                            <option value="chaturbate">Chaturbate</option>
+                            <option value="stripchat">Stripchat</option>
+                            <option value="myfreecams">MyFreeCams</option>
+                            <option value="bongacams">BongaCams</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="token-amount">Cantidad de Tokens</label>
+                        <input type="number" id="token-amount" class="form-control" placeholder="Ej: 1000" min="100" value="1000">
+                        <div class="token-presets">
+                            <button class="token-preset" data-amount="100">100</button>
+                            <button class="token-preset" data-amount="1000">1,000</button>
+                            <button class="token-preset" data-amount="5000">5,000</button>
+                            <button class="token-preset" data-amount="10000">10,000</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">País de Destino</label>
+                        <select id="country" class="form-control">
+                            <option value="usa">Estados Unidos</option>
+                            <option value="mexico">México</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="brazil">Brasil</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="spain">España</option>
+                            <option value="uk">Reino Unido</option>
+                        </select>
+                    </div>
+                    
+                    <button id="calculate-btn" class="calculate-button">Calcular Conversión</button>
+                </div>
+                
+                <div class="calculator-results">
+                    <div class="results-header">
+                        <h3>Resultado de Conversión</h3>
+                    </div>
+                    <div class="results-body">
+                        <div class="result-item">
+                            <span class="result-label">Valor aproximado:</span>
+                            <span id="approximate-value" class="result-value">$0.00 USD</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Comisión (<span id="commission-rate">0</span>%):</span>
+                            <span id="commission-amount" class="result-value">$0.00 USD</span>
+                        </div>
+                        <div class="result-item highlight">
+                            <span class="result-label">Recibirás:</span>
+                            <span id="final-amount" class="result-value">$0.00 USD</span>
+                        </div>
+                    </div>
+                    <div class="results-footer">
+                        <a href="https://wa.me/1234567890?text=Hola,%20quiero%20convertir%20mis%20tokens" class="whatsapp-button" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Contactar para Conversión
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>Cómo funciona</h2>
+            <p class="section-subtitle">Convertir tus tokens nunca fue tan fácil</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Contacta a nuestro equipo</h3>
+                    <p>Envíanos un mensaje por WhatsApp con tu comprobante de tokens y los detalles de tu conversión.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Recibe tu cotización</h3>
+                    <p>Te enviaremos una cotización exacta con la comisión aplicada según el volumen de tokens.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Recibe tu pago</h3>
+                    <p>El dinero se transferirá inmediatamente a tu cuenta después de confirmar los detalles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fees" class="fees-section">
+        <div class="container">
+            <h2>Tarifas por Volumen</h2>
+            <p class="section-subtitle">Mientras más tokens conviertas, menos comisión pagas</p>
+            
+            <div class="fees-table">
+                <div class="table-header">
+                    <div class="header-item">Rango de Tokens</div>
+                    <div class="header-item">Comisión</div>
+                </div>
+                
+                <div class="table-row">
+                    <div class="row-item">Menos de 2,000</div>
+                    <div class="row-item">10.5%</div>
+                </div>
+                
+                <div class="table-row">
+                    <div class="row-item">2,000 - 5,000</div>
+                    <div class="row-item">9%</div>
+                </div>
+                
+                <div class="table-row">
+                    <div class="row-item">Más de 5,000</div>
+                    <div class="row-item">7%</div>
+                </div>
+            </div>
+            
+            <div class="note">
+                <p><strong>Nota:</strong> Las comisiones pueden variar ligeramente dependiendo del país de destino del pago.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <p class="section-subtitle">Modelos que ya confían en nosotros</p>
+            
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>He convertido mis tokens con TokenCash varias veces y siempre recibo mi dinero en minutos. ¡La mejor tasa de conversión!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/testimonial1.jpg" alt="Sophia">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sophia</h4>
+                            <span>Modelo en Chaturbate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>Antes perdía mucho dinero con las opciones tradicionales. Ahora con TokenCash obtengo más por mis tokens y el proceso es super rápido.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/testimonial2.jpg" alt="Valentina">
+                        </div>
+                        <div class="author-info">
+                            <h4>Valentina</h4>
+                            <span>Modelo en Stripchat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p class="section-subtitle">¿Tienes preguntas? Escríbenos</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p>+1 (234) 567-8900</p>
+                            <a href="https://wa.me/1234567890" class="contact-link" target="_blank">Enviar mensaje</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>soporte@tokencash.com</p>
+                            <a href="mailto:soporte@tokencash.com" class="contact-link">Enviar correo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Horario de atención</h3>
+                            <p>Lunes a Domingo</p>
+                            <p>9:00 AM - 11:00 PM (GMT-5)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" class="form-control" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" class="form-control" placeholder="Asunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span>Token</span><span class="logo-highlight">Cash</span>
+                    </div>
+                    <p>La forma más rápida y segura de convertir tus tokens de cámara web en dinero real.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#calculator">Calculadora</a></li>
+                        <li><a href="#how-it-works">Cómo funciona</a></li>
+                        <li><a href="#fees">Tarifas</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Plataformas</h3>
+                    <ul>
+                        <li><a href="#">Chaturbate</a></li>
+                        <li><a href="#">Stripchat</a></li>
+                        <li><a href="#">MyFreeCams</a></li>
+                        <li><a href="#">BongaCams</a></li>
+                        <li><a href="#">Otras plataformas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 TokenCash. Todos los derechos reservados.</p>
+                <div class="payment-methods">
+                    <img src="images/payment1.png" alt="PayPal">
+                    <img src="images/payment2.png" alt="Transferencia Bancaria">
+                    <img src="images/payment3.png" alt="Crypto">
+                    <img src="images/payment4.png" alt="Pago Móvil">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="java2.js"></script>
+</body>
+</html>
