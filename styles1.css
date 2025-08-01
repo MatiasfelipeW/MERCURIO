@@ -1,8 +1,8 @@
 /* Estilos generales */
 :root {
-  --primary-color: #6c63ff;
-  --secondary-color: #4d44db;
-  --dark-color: #2a2a72;
+  --primary-color: #acc74db9;
+  --secondary-color: #02010e;
+  --dark-color: #e3e3f1;
   --light-color: #f8f9fa;
   --accent-color: #ff6584;
 }
@@ -25,6 +25,7 @@ header {
   padding: 3rem 1rem !important;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 header::before {
@@ -36,6 +37,8 @@ header::before {
   height: 100%;
   background: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop') no-repeat center/cover;
   opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
 }
 
 header h1 {
@@ -64,6 +67,7 @@ section {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
+  animation: fadeIn 0.6s ease forwards;
 }
 
 section:hover {
@@ -112,6 +116,7 @@ ul li::before {
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+  cursor: pointer;
 }
 
 .btn-success:hover {
@@ -149,10 +154,6 @@ footer p {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-section {
-  animation: fadeIn 0.6s ease forwards;
 }
 
 section:nth-child(2) { animation-delay: 0.2s; }
