@@ -6,20 +6,226 @@
   <title>Mercurio Studio - Modelos Flirt4Free</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="styles1.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark-bg: #0d0d0d;
+      --dark-purple: #1a001a;
+      --blood-red: #8b0000;
+      --gold: #d4af37;
+      --silver: #c0c0c0;
+      --dark-gray: #333;
+      --light-gray: #aaa;
+    }
+    
+    body {
+      background-color: var(--dark-bg);
+      color: var(--silver);
+      font-family: 'Cinzel', serif;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(139, 0, 0, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(139, 0, 0, 0.1) 0%, transparent 20%);
+      background-attachment: fixed;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--gold);
+      font-family: 'MedievalSharp', cursive;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    
+    header {
+      background: linear-gradient(to bottom, var(--dark-purple), var(--dark-bg)) !important;
+      border-bottom: 3px solid var(--blood-red);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='%23000'/%3E%3Cpath d='M0 0l100 100M100 0L0 100' stroke='%23800' stroke-width='1' opacity='0.25'/%3E%3C/svg%3E");
+      opacity: 0.1;
+    }
+    
+    .btn-success {
+      background-color: var(--blood-red);
+      border-color: var(--gold);
+      color: var(--silver);
+      font-weight: bold;
+      transition: all 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .btn-success:hover {
+      background-color: var(--gold);
+      border-color: var(--blood-red);
+      color: var(--dark-bg);
+      transform: scale(1.05);
+    }
+    
+    .btn-outline-primary {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+    
+    .btn-outline-primary:hover {
+      background-color: var(--gold);
+      color: var(--dark-bg);
+    }
+    
+    main section {
+      background-color: rgba(13, 13, 13, 0.8);
+      border: 1px solid var(--blood-red);
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    main section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23800' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.2;
+      z-index: -1;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    ul li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 30px;
+    }
+    
+    ul li::before {
+      content: "†";
+      color: var(--blood-red);
+      font-size: 1.2em;
+      position: absolute;
+      left: 0;
+      top: 8px;
+    }
+    
+    .bg-light {
+      background-color: rgba(26, 0, 26, 0.7) !important;
+      border: 2px solid var(--gold) !important;
+    }
+    
+    .badge {
+      background-color: var(--blood-red);
+      color: var(--silver);
+      font-family: 'MedievalSharp', cursive;
+    }
+    
+    .testimonial-card {
+      background: linear-gradient(to bottom right, var(--dark-purple), var(--dark-bg));
+      border: 1px solid var(--gold);
+      border-radius: 8px;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: var(--blood-red);
+      border-radius: 50%;
+    }
+    
+    .form-control {
+      background-color: rgba(51, 51, 51, 0.7);
+      border: 1px solid var(--blood-red);
+      color: var(--silver);
+    }
+    
+    .form-control:focus {
+      background-color: rgba(51, 51, 51, 0.9);
+      border-color: var(--gold);
+      color: var(--silver);
+      box-shadow: 0 0 0 0.25rem rgba(139, 0, 0, 0.25);
+    }
+    
+    .contact-info {
+      background: linear-gradient(to bottom right, var(--dark-purple), var(--dark-bg));
+      border: 1px solid var(--blood-red);
+      border-radius: 8px;
+    }
+    
+    footer {
+      background: linear-gradient(to top, var(--dark-purple), var(--dark-bg)) !important;
+      border-top: 3px solid var(--blood-red);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='%23000'/%3E%3Cpath d='M0 0l100 100M100 0L0 100' stroke='%23800' stroke-width='1' opacity='0.25'/%3E%3C/svg%3E");
+      opacity: 0.1;
+    }
+    
+    .social-links a {
+      color: var(--silver);
+      transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+      color: var(--gold);
+      transform: scale(1.2);
+    }
+    
+    .img-fluid {
+      border: 2px solid var(--blood-red);
+      transition: all 0.3s;
+    }
+    
+    .img-fluid:hover {
+      border-color: var(--gold);
+      transform: scale(1.02);
+    }
+    
+    /* Decoraciones góticas adicionales */
+    .gothic-divider {
+      height: 30px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L100,0 L100,5 L0,5 L0,10 L100,10 L100,15 L0,15 Z' fill='%23800' opacity='0.3'/%3E%3Cpath d='M0,0 L100,0 L100,3 L0,3 L0,6 L100,6 L100,9 L0,9 L0,12 L100,12 L100,15 L0,15 Z' fill='%23d4af37' opacity='0.2'/%3E%3C/svg%3E");
+      background-size: 100% 100%;
+      margin: 20px 0;
+    }
+  </style>
 </head>
 <body>
 
 <header class="bg-dark text-white text-center p-4">
   <div class="container">
-    <h1>SE UN PROFESIONAL EN FLIRT4FREE</h1>
+    <h1 class="display-4 mb-3">Mercurio Studio</h1>
     <p class="lead">¡Empieza hoy tu carrera como modelo webcam profesional!</p>
     <a href="https://wa.me/573508312629" target="_blank" class="btn btn-success btn-lg mt-3">
       <i class="fas fa-paper-plane me-2"></i>¡Quiero unirme!
     </a>
   </div>
+  <div class="gothic-divider"></div>
 </header>
-
 
   <main class="container my-5">
     <section class="mb-5">
@@ -81,13 +287,17 @@
   <div class="mt-4">
     <h5>Proceso de pago en Telegram:</h5>
     <div class="d-flex flex-column flex-md-row gap-3">
-      <img src="MEDIA/telegram1.jpeg" alt="Captura de pantalla de pago Telegram paso 1" class="img-fluid rounded shadow" style="max-width:300px;">
-      <img src="MEDIA/telegram2.jpeg" alt="Captura de pantalla de pago Telegram paso 2" class="img-fluid rounded shadow" style="max-width:300px;">
+      <!-- Imágenes de ejemplo (reemplazar con las reales) -->
+      <div style="width: 300px; height: 200px; background-color: #333; border: 2px solid #8b0000; display: flex; justify-content: center; align-items: center; color: #aaa;">
+        Imagen Telegram 1
+      </div>
+      <div style="width: 300px; height: 200px; background-color: #333; border: 2px solid #8b0000; display: flex; justify-content: center; align-items: center; color: #aaa;">
+        Imagen Telegram 2
+      </div>
     </div>
     <small class="text-muted d-block mt-2">Visualiza cómo es el proceso de pago en Telegram para mayor confianza y transparencia.</small>
   </div>
 </section>
-
 
     <section class="mb-5">
       <h2><i class="fas fa-comment me-2"></i>Testimonios de Modelos</h2>
@@ -178,7 +388,7 @@
                 </a>
               </li>
               <li class="mb-3">
-                <a href="matiaswhiat@mail.de" class="text-decoration-none">
+                <a href="mailto:matiaswhiat@mail.de" class="text-decoration-none">
                   <i class="fas fa-envelope fa-lg me-2 text-primary"></i>matiaswhiat@mail.de
                 </a>
               </li>
@@ -234,9 +444,29 @@
         <p class="mb-0">&copy; 2025 Mercurio Studio - Todos los derechos reservados.</p>
       </div>
     </div>
+    <div class="gothic-divider"></div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="java1.js"></script>
+  <script>
+    // Validación del formulario
+    (function () {
+      'use strict'
+      var form = document.getElementById('contactForm')
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })()
+    
+    // Inicializar tooltips de Bootstrap
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
 </body>
 </html>
